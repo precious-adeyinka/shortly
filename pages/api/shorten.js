@@ -26,7 +26,7 @@ if (!firebase.apps.length) {
 const db = firebase.firestore();
 
 export default async (req, res) => {
-  const baseURL = process.env.NODE_ENV !== 'production' ? "http://localhost:3000" : "https://shortly-shortener.vercel.app/";
+  const baseURL = process.env.NODE_ENV !== 'production' ? "http://localhost:3000" : "https://shortly-shortener.vercel.app";
 
   if (req.method === "POST") {
     // logic goes here

@@ -12,8 +12,8 @@ const MobileNav = ({ status }) => {
     <div
       className={`${
         isOpen
-          ? "h-auto opacity-1 pt-10 p-5 shadow-2xl transform translate-x-0"
-          : "h-auto opacity-0 p-0 shadow-none transition duration-700 transform translate-x-100"
+          ? "h-auto opacity-1 pt-10 p-5 shadow-2xl transform scale-100"
+          : "h-auto opacity-0 p-0 shadow-none transition duration-700 transform scale-90"
       } transition duration-700 w-11/12 mx-auto bgDarkViolet py-10 rounded-lg
       flex flex-row justify-center items-center absolute top-16 left-4 z-50 overflow-hidden md:hidden`}
     >

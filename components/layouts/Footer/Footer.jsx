@@ -109,7 +109,8 @@ const Footer = () => {
 
           {/* Social */}
           <div className="md:h-full flex flex-col justify-center md:justify-start items-center md:items-start md:ml-10 space-y-5">
-            <div className="w-8/12 leading-normal md:w-10/12 text-sm md:text-[13px] text-white text-center md:text-left font-medium md:font-normal">© 2021 Shortly Handmade in Abuja, Nigeria, by&nbsp; 
+            <div className="w-8/12 leading-normal md:w-10/12 text-sm md:text-[13px] text-white text-center md:text-left font-medium md:font-normal">
+              © {new Date().getFullYear()} Shortly, made with love by&nbsp; 
               <Link href="https://www.linkedin.com/in/precious-adeyinka" className="bgColorThemePrimary">Precious Adeyinka</Link>.
             </div>
             
