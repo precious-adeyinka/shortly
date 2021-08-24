@@ -36,14 +36,14 @@ const Footer = () => {
 
       {/* Footer */}
       <div className="h-auto md:h-72 w-full bgDarkViolet flex flex-col md:flex-row justify-center items-center py-10 md:p-0 m-0">
-        <div className="h-auto md:h-full w-full md:w-[20%] flex flex-row justify-center md:justify-start items-start md:pl-10 md:pt-16">
+        <div className="h-auto md:h-full w-full md:w-[25%] flex flex-row justify-center md:justify-start items-start md:pl-10 md:pt-16">
           <h1 className="font-bold text-4xl md:text-3xl text-white my-5 md:m-0 mb-12">
             Shortly
           </h1>
         </div>
 
         {/*  */}
-        <div className="h-auto md:h-full w-full md:w-[80%] flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start space-y-10 md:space-y-0 md:space-x-20 md:pt-16">
+        <div className="h-auto md:h-full w-full md:w-[75%] flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start space-y-10 md:space-y-0 md:space-x-20 md:pt-16">
           {/* Features */}
           <div className="md:h-full flex flex-col justify-center md:justify-start items-center md:items-start space-y-4 md:space-y-5">
             {/* Title */}
@@ -109,9 +109,9 @@ const Footer = () => {
 
           {/* Social */}
           <div className="md:h-full flex flex-col justify-center md:justify-start items-center md:items-start md:ml-10 space-y-5">
-            <div className="w-8/12 leading-normal md:w-10/12 text-sm md:text-[13px] text-white text-center md:text-left font-medium md:font-normal">
+            <div className="w-8/12 leading-normal md:w-7/12 text-sm md:text-[13px] text-white text-center md:text-left font-medium md:font-normal">
               © {new Date().getFullYear()} Shortly, made with love by&nbsp; 
-              <Link href="https://www.linkedin.com/in/precious-adeyinka" className="bgColorThemePrimary">Precious Adeyinka</Link>.
+              <Link href="https://www.linkedin.com/in/precious-adeyinka"><span className="bgColorThemePrimary cursor-pointer font-bold">Precious Adeyinka</span></Link>.
             </div>
             
             {/* List */}
