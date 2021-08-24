@@ -30,7 +30,7 @@ const UrlComponent = ({ url }) => {
           text={url.shortUrl}
           onCopy={onCopyText}
           className={`h-12 md:h-8 w-11/12 md:w-3/12 mx-auto ${isCopied ? "bgTheme" : "bgThemePrimary"} text-white shadow-lg text-md md:text-sm font-bold 
-          flex justify-center items-center rounded-md border-0 py-3 px-5 focus:outline-none active:bgTheme focus:bgTheme`}
+          flex justify-center items-center rounded-md border-0 py-3 px-5 focus:outline-none`}
           >
             <button
               // className={`h-12 md:h-8 w-11/12 md:w-3/12 mx-auto ${isCopied ? "bgTheme" : "bgThemePrimary"} text-white shadow-lg text-md md:text-sm font-bold 
