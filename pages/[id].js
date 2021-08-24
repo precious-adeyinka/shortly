@@ -17,7 +17,7 @@ const DynamicUrlsPage = () => {
     }
     else {
       // Setup the base url
-      const base_url = "http://localhost:3000/api/urls/" + urlCode;
+      const base_url = process.env.NODE_ENV !== 'production' ? "http://localhost:3000/api/urls/" + urlCode : "https://shortly-shortener.vercel.app/api/urls/" + urlCode
       // Redirect to the base url value
       window.location.href = base_url;
     }
