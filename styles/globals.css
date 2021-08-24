@@ -1,16 +1,168 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  ::root {
+    --theme: hsl(257, 27%, 26%); /* Cyan */
+    --theme-primary: hsl(180, 66%, 49%); /* Dark Violet */
+    --theme-secondary: hsl(0, 87%, 67%); /* Red */
+    --theme-tertiary: hsl(0, 0%, 75%); /* Gray */
+    --grayish-violet: hsl(257, 7%, 63%); /* Grayish Violet */
+    --dark-blue: hsl(255, 11%, 22%); /* Very Dark Blue */
+    --dark-violet: hsl(260, 8%, 14%); /* Very Dark Violet */
+  }
+  /* Background Color Utilities */
+  .bgTheme {
+    background: var(--theme, hsl(257, 27%, 26%));
+  }
+  .bgThemePrimary {
+    background: var(--theme-primary, hsl(180, 66%, 49%));
+  }
+  .bgThemeSecondary {
+    background: var(--theme-secondary, hsl(0, 87%, 67%));
+  }
+  .bgThemeTertiary {
+    background: var(--theme-tertiary, hsl(0, 0%, 75%));
+  }
+  .bgDarkBlue {
+    background: var(--dark-blue, hsl(255, 11%, 22%));
+  }
+  .bgDarkViolet {
+    background: var(--dark-Violet, hsl(260, 8%, 14%));
+  }
 
-* {
-  box-sizing: border-box;
+  /* Text Color Utilities */
+  .bgColorTheme {
+    color: var(--theme, hsl(257, 27%, 26%));
+  }
+  .bgColorThemePrimary {
+    color: var(--theme-primary, hsl(180, 66%, 49%));
+  }
+  .bgColorThemeSecondary {
+    color: var(--theme-secondary, hsl(0, 87%, 67%));
+  }
+  .bgColorThemeTertiary {
+    color: var(--theme-tertiary, hsl(0, 0%, 75%));
+  }
+  .bgColorDarkBlue {
+    color: var(--dark-blue, hsl(255, 11%, 22%));
+  }
+
+  /* Text Utilities */
+  .ellipsis {
+    width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+  }
+
+  html,
+  body {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    overflow: hidden;
+  }
+
+  /* Logo Pseudo Element */
+  .logoAfter::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background: var(--theme-primary, hsl(180, 66%, 49%));
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+  }
+
+  /* Nav Links Utilities */
+  .navLinkAfter {
+    position: relative;
+  }
+  .navLinkAfter::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background: var(--theme-primary, hsl(180, 66%, 49%));
+    border-radius: 10px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transition: all 200ms ease-in-out;
+    transform: translateX(-50%);
+  }
+  .navLinkAfter:hover::after {
+    width: 90%;
+  }
+
+  /* Global Utilities */
+  .spinner {
+    border: 2px solid rgba(255,255,255,0.30);
+    border-top-color: #fff;
+  }
+  .spinnerDark {
+    border: 2px solid rgba(0,0,0,0.30);
+    border-top-color: #333;
+  }
+  .responsiveVisibility {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  @media (min-width: 768px) {
+    .responsiveVisibility {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .primaryCustomShadow {
+    box-shadow: 0 10px 15px -3px rgb(42, 207, 207, 0.10), 0 4px  6px 3px rgb(42, 207, 207, 0.20);
+  }
+
+  /* Background Image Utilities */
+
+  .bgBoostMobile {
+    background: url("/assets/images/bg-boost-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+  .bgShortenMobile {
+    background: url("/assets/images/bg-shorten-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: 100% 0%;
+    object-fit: contain;
+  }
+  .bgBoostDesktop {
+    background: url("/assets/images/bg-boost-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+  .bgShortenDesktop {
+    background: url("/assets/images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
 }
