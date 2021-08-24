@@ -59,7 +59,7 @@ const Features = (props) => {
   return (
     <div className="h-auto w-full bg-gray-200 py-20 pb-44">
       {/* URLS */}
-      <div className="h-auto w-full my-10 mt-5 flex flex-col justify-center items-center space-y-5">
+      <div className="h-auto w-full my-10 flex flex-col justify-center items-center space-y-5">
         {
           shortenedLinks?.length !== 0 && shortenedLinks?.map((url) => {
             return (
