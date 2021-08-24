@@ -5,7 +5,6 @@
 }
 .lineAfterMobile {
   position: relative !important;
-  z-index: auto!important;
 }
 .lineAfterMobile::after {
   content: "";
@@ -13,7 +12,7 @@
   width: 10px;
   border-radius: 10px;
   position: absolute;
-  left: -25%;
+  left: 50%;
   top: 50%;
   transform: translateY(-50%);
   background: hsl(180, 66%, 49%);
