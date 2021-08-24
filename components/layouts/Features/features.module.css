@@ -1,30 +1,29 @@
 /* Featured Elements Utitlities */
-.featuredElemAfter {
+.featuredElemAfter{
   position: relative !important;
-  z-index: auto !important;
+  z-index: 2!important;
 }
-.featuredElemAfter:nth-child(1)::after,
-.featuredElemAfter:nth-child(2)::after {
+.lineAfterMobile {
+  position: relative !important;
+  z-index: auto!important;
+}
+.lineAfterMobile::after {
   content: "";
-  height: 70px;
+  height: 70%;
   width: 10px;
   border-radius: 10px;
   position: absolute;
-  left: 50%;
-  bottom: -25%;
-  z-index: -1;
+  left: -25%;
+  top: 50%;
   transform: translateY(-50%);
   background: hsl(180, 66%, 49%);
 }
-
 @media (min-width: 768px) {
-  .featuredElemAfter:nth-child(1)::after,
-  .featuredElemAfter:nth-child(2)::after {
+  .lineAfterMobile::after {
     height: 10px;
-    width: 70px;
-    top: 50%;
-    right: 0%;
-    left: 100%;
-    transform: translateX(-30%);
+    width: 70%;
+    left: 50%;
+    bottom: -25%;
+    transform: translate(-50%, -50%);
   }
 }

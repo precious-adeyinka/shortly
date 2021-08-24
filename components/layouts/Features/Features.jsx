@@ -81,7 +81,7 @@ const Features = (props) => {
       </div>
 
       {/* Features List */}
-      <div className="h-auto w-full md:w-10/12 md:mx-auto flex flex-col md:flex-row justify-center items-center space-y-5 md:space-x-8 md:space-y-0 mt-20 md:mt-16">
+      <div className={`h-auto w-full md:w-10/12 md:mx-auto flex flex-col md:flex-row justify-center items-center space-y-5 md:space-x-8 md:space-y-0 mt-20 md:mt-16 ${styled.lineAfterMobile}`}>
         {/* Brand Recognition */}
         <div
           className={`h-50 w-10/12 bg-white shadow-xl rounded-lg mx-auto py-10 px-3 pt-20 ${styled.featuredElemAfter} md:pl-7 md:transform translate-y-0`}
