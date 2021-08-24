@@ -48,7 +48,7 @@ const Form = (props) => {
   };
 
   const handleSubmit = (e) => {
-    const base_url = "http://localhost:3000/api/shorten";
+    const base_url = process.env.NODE_ENV !== 'production' ? "http://localhost:3000/api/shorten" : "https://shortly-shortener.vercel.app/api/shorten";
 
     e.preventDefault();
 

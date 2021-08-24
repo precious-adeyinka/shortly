@@ -23,7 +23,7 @@ const UrlComponent = ({ url }) => {
         </div>
         <div className="h-auto w-full md:w-1/2 flex flex-col md:flex-row md:px-5 justify-center items-start md:items-center space-y-3 md:space-y-0 md:space-x-4">
           <div className="h-12 p-5 text-md md:text-sm font-bold bgColorThemePrimary flex flex-row justify-start items-center">
-            <Link href={`http://localhost:3000/api/urls/${url.urlCode}`}>{url.shortUrl}</Link>
+            <Link href={`${process.env.NODE_ENV !== 'production' ? 'http://localhost:3000/api/urls/' : 'https://shortly-shortener.vercel.app/api/urls/'}${url.urlCode}`}>{url.shortUrl}</Link>
           </div>
 
           <CopyToClipboard

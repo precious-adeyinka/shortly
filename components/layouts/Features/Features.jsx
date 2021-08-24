@@ -17,7 +17,7 @@ const Features = (props) => {
 
   useEffect(() => {
     // Get all the created links
-    const base_url = "http://localhost:3000/api/all_urls";
+    const base_url = process.env.NODE_ENV !== 'production' ? "http://localhost:3000/api/all_urls" : "https://shortly-shortener.vercel.app/api/all_urls";
 
     // if (!(Object.keys(urls).length === 0)) {
     if (!(urls.length === 0)) {
